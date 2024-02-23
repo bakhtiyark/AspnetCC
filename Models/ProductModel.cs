@@ -6,9 +6,11 @@ public class ProductModel
 {
     public int Id { get; set; }
     [Microsoft.Build.Framework.Required]
-    public string Name { get; set; }
-    [Microsoft.Build.Framework.Required]
-    public string Description { get; set; }
+    public string Name { get; set; } = null!;
+
+    [Microsoft.Build.Framework.Required] 
+    public string Description { get; set; } = null!;
+    
     [DataType(DataType.Currency)]
     [Range(0.01, 1000, ErrorMessage = "Value for {0} must be between " + "{1:C} and {2:C}")]
     public decimal Price { get; set; }

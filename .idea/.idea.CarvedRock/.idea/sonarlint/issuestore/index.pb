@@ -54,3 +54,15 @@ G
 Views/_ViewStart.cshtml,8\7\8791b970e2e2b71e1675d4f2d5492a08859bb364
 I
 Views/Home/_Layout.cshtml,1\d\1d3c814dbb8dfa97880983a61969cbd1e64aa095
+h
+8wwwroot/lib/jquery-validation/dist/additional-methods.js,e\7\e793c6a0e22f6c33f96d6a26205afedb76a7d584
+e
+5wwwroot/lib/jquery-validation/dist/jquery.validate.js,b\8\b8a68d4cb8206712a8837f76fc5a1af1376dba81
+Q
+!wwwroot/lib/jquery/dist/jquery.js,1\3\130def839a6da84e0c71d40eae06abbdd7e16837
+[
++obj/Debug/net8.0/CarvedRock.AssemblyInfo.cs,8\8\8878705220a325da88c38dd4e46f143017420568
+u
+Eobj/Debug/net8.0/CarvedRock.GeneratedMSBuildEditorConfig.editorconfig,f\f\ff033d9e80a9b33b1ca6c4d452ad64adc6ab8b4b
+T
+$wwwroot/css/litera-bootstrap.min.css,d\0\d0857913595d2b089dbf7dda2e9168aff4d7f85d

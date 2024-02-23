@@ -3,24 +3,18 @@ using CarvedRock.Models;
 
 namespace CarvedRock.Controllers;
 
-public class ProductsController : Controller
+public class ProductsController(IProductLogic logic, List<ProductModel> products) : Controller
 {
-    private readonly IProductLogic _logic;
-    public List<ProductModel> Products { get; set; }
+    public List<ProductModel> Products { get; set; } = products;
 
-    public ProductsController(IProductLogic logic)
-    {
-        // Products = GetSampleProducts();
-        _logic = logic;
-    }
     public async Task<IActionResult> Index()
     {
-        var products = await _logic.GetAllProducts();
+        var products = await logic.GetAllProducts();
         return View(products);
     }
     public async Task<IActionResult> Details(int id)
     {
-        var product = await _logic.GetProductById(id);
+        var product = await logic.GetProductById(id);
         return product == null ? NotFound() : View(product);
     }
     
@@ -35,7 +29,7 @@ public class ProductsController : Controller
         {
             if (ModelState.IsValid)
             {
-                await _logic.AddNewProduct(product);
+                await logic.AddNewProduct(product);
                 return RedirectToAction(nameof(Index));
             }
             return View(product);
@@ -47,7 +41,7 @@ public class ProductsController : Controller
                 return NotFound();
             }
 
-            var product = await _logic.GetProductById(id.Value);
+            var product = await logic.GetProductById(id.Value);
             if (product == null)
             {
                 return NotFound();
@@ -66,7 +60,7 @@ public class ProductsController : Controller
 
             if (ModelState.IsValid)
             {
-                await _logic.UpdateProduct(product);
+                await logic.UpdateProduct(product);
                 return RedirectToAction(nameof(Index));
             }
 
@@ -79,7 +73,7 @@ public class ProductsController : Controller
             {
                 return NotFound();
             }
-            var product = await _logic.GetProductById(id.Value);
+            var product = await logic.GetProductById(id.Value);
             if (product == null)
             {
                 return NotFound();
@@ -92,7 +86,7 @@ public class ProductsController : Controller
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            await _logic.RemoveProduct(id);
+            await logic.RemoveProduct(id);
             return RedirectToAction(nameof(Index)); 
         }
         
