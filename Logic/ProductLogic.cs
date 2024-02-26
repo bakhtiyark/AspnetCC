@@ -11,6 +11,7 @@ public class ProductLogic : IProductLogic
     {
         _repo = repo;
     }
+
     public async Task<List<ProductModel>> GetAllProducts()
     {
         var products = await _repo.GetAllProductsAsync();

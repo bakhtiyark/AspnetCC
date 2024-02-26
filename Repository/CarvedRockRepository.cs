@@ -6,7 +6,6 @@ namespace CarvedRock.Repository;
 
 public class CarvedRockRepository(ProductContext context) : ICarvedRockRepository
 {
-    
     public async Task<List<Product>> GetAllProductsAsync()
     {
         return await context.Products
@@ -37,10 +36,7 @@ public class CarvedRockRepository(ProductContext context) : ICarvedRockRepositor
         }
         catch (DBConcurrencyException)
         {
-            if (context.Products.Any(e => e.Id == product.Id))
-            {
-                throw;
-            }
+            if (context.Products.Any(e => e.Id == product.Id)) throw;
         }
     }
 

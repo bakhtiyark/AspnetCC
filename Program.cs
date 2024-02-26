@@ -18,10 +18,7 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     var ctx = services.GetRequiredService<ProductContext>();
     ctx.Database.Migrate();
-    if (app.Environment.IsDevelopment())
-    {
-        ctx.SeedInitialData();
-    }
+    if (app.Environment.IsDevelopment()) ctx.SeedInitialData();
 }
 
 app.UseExceptionHandler("/Home/Error");
@@ -37,7 +34,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    "default",
+    "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

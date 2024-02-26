@@ -8,5 +8,5 @@ public interface ICarvedRockRepository
     Task<Product?> GetProductByIdAsync(int productId);
     Task<Product> AddProductAsync(Product product);
     Task UpdateProductAsync(Product product);
-    Task RemoveProductAsync(int productIdToRemove); 
+    Task RemoveProductAsync(int productIdToRemove);
 }
