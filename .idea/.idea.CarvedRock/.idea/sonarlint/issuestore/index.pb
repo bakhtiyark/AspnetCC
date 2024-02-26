@@ -38,8 +38,6 @@ F
 Logic/IProductLogic.cs,0\4\04cfe6d68aed321c71bdbb820f8879fcdca71163
 H
 Models/ErrorViewModel.cs,e\9\e9b569d3488d7b928ada7cb4d9998ece39367024
-D
-Data/ProductModel.cs,a\5\a52690a71c40277dd42d9f791d0cf26ef417994a
 E
 Logic/ProductLogic.cs,9\1\91080794301c5f85423095d8bb4f324f10fc12d4
 J
@@ -52,8 +50,6 @@ I
 Views/_ViewImports.cshtml,2\f\2f0aad3dbc1f58057db721e3b247db8ffacedc1a
 G
 Views/_ViewStart.cshtml,8\7\8791b970e2e2b71e1675d4f2d5492a08859bb364
-I
-Views/Home/_Layout.cshtml,1\d\1d3c814dbb8dfa97880983a61969cbd1e64aa095
 h
 8wwwroot/lib/jquery-validation/dist/additional-methods.js,e\7\e793c6a0e22f6c33f96d6a26205afedb76a7d584
 e
@@ -66,3 +62,13 @@ u
 Eobj/Debug/net8.0/CarvedRock.GeneratedMSBuildEditorConfig.editorconfig,f\f\ff033d9e80a9b33b1ca6c4d452ad64adc6ab8b4b
 T
 $wwwroot/css/litera-bootstrap.min.css,d\0\d0857913595d2b089dbf7dda2e9168aff4d7f85d
+@
+Data/Category.cs,8\c\8c88b9803f1e56995d6389e7ba8ba68a094ea71b
+X
+(Migrations/20240226214943_AddCategory.cs,f\9\f9709e9aefcd611be299fe889295bc5d90a8cd0b
+S
+#Controllers/CaterogiesController.cs,1\b\1b1211e5db26e104bb53b016a303a065ed25f430
+S
+#Controllers/CategoriesController.cs,d\1\d17ed5ce227d94fe8cf58b17153bbddaf55704ab
+N
+Views/Categories/Create.cshtml,9\8\986a809d8c2eb15e97b4cf31f9656e81130cce87

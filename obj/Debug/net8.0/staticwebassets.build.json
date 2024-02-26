@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Zuwtq9Ufm9PagBr97nZL0kQ2y272RHIlTkfA9SaYjk4=",
+  "Hash": "LPHNvZ5cXBskiY1PakJ+DURq7i9S6UJBeD/fi6tYDms=",
   "Source": "CarvedRock",
   "BasePath": "_content/CarvedRock",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\bakht\\source\\repos\\CarvedRock\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CarvedRock.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\bakht\\source\\repos\\CarvedRock\\wwwroot\\css\\litera-bootstrap.min.css",
+      "SourceId": "CarvedRock",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bakht\\source\\repos\\CarvedRock\\wwwroot\\",
+      "BasePath": "_content/CarvedRock",
+      "RelativePath": "css/litera-bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\litera-bootstrap.min.css"
     },
     {
       "Identity": "C:\\Users\\bakht\\source\\repos\\CarvedRock\\wwwroot\\css\\site.css",

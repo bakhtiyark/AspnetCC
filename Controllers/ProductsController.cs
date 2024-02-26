@@ -90,13 +90,4 @@ public class ProductsController(IProductLogic logic, List<ProductModel> products
             return RedirectToAction(nameof(Index)); 
         }
         
-    // private List<ProductModel>? GetSampleProducts()
-    // {
-    //     return new List<ProductModel> { 
-    //     new ProductModel { Id = 1, Description = "Shoes", IsActive=true, Name="Adidas", Price= 199.99m },
-    //     new ProductModel { Id = 2, Description = "Shoes", IsActive=true, Name="Nike", Price= 299.99m },
-    //     new ProductModel { Id = 3, Description = "Shoes", IsActive=true, Name="NB", Price= 169.99m },
-    //     new ProductModel { Id = 4, Description = "Shoes", IsActive=true, Name="Bata", Price= 149.99m },
-    //     new ProductModel { Id = 5, Description = "Shoes", IsActive=true, Name="Asics", Price= 189.99m }};
-    // }
 }
