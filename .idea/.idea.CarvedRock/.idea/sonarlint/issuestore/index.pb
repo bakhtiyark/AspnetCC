@@ -118,3 +118,6 @@ O
 Views/ProductsDb/Details.cshtml,4\5\4517b47ec83eda8dfe192c1fce9c2eb7d06a153b
 L
 Views/ProductsDb/Edit.cshtml,0\3\03a2bb7fbf12dd70f890658cd34a612c38d8d3fb
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
