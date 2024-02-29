@@ -1,52 +1,74 @@
-using System.Data;
 using CarvedRock.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarvedRock.Repository;
 
-public class CarvedRockRepository(ProductContext context) : ICarvedRockRepository
+public class CarvedRockRepository : ICarvedRockRepository
 {
+    private readonly ProductContext _context;
+
+    public CarvedRockRepository(ProductContext context)
+    {
+        _context = context;
+    }
+
     public async Task<List<Product>> GetAllProductsAsync()
     {
-        return await context.Products
+        return await _context.Products
             .Include(p => p.Category)
             .ToListAsync();
     }
 
     public async Task<Product?> GetProductByIdAsync(int productId)
     {
-        return await context.Products
+        return await _context.Products
             .Include(p => p.Category)
-            .FirstOrDefaultAsync(x => x.Id == productId);
+            .FirstOrDefaultAsync(m => m.Id == productId);
     }
 
     public async Task<Product> AddProductAsync(Product product)
     {
-        context.Add(product);
-        await context.SaveChangesAsync();
-        return product;
+        _context.Products.Add(product);
+        await _context.SaveChangesAsync();
+        return product; // will have updated ID value
     }
 
     public async Task UpdateProductAsync(Product product)
     {
         try
         {
-            context.Update(product);
-            await context.SaveChangesAsync();
+            _context.Update(product);
+            await _context.SaveChangesAsync();
         }
-        catch (DBConcurrencyException)
+        catch (DbUpdateConcurrencyException)
         {
-            if (context.Products.Any(e => e.Id == product.Id)) throw;
+            if (_context.Products.Any(e => e.Id == product.Id))
+                // product exists and update exception is real
+                throw;
+            // caught and swallowed exception can occur if 
+            // the other update was a delete
         }
     }
 
     public async Task RemoveProductAsync(int productIdToRemove)
     {
-        var product = await context.Products.FirstOrDefaultAsync(p => p.Id == productIdToRemove);
-        if (product is not null)
+        if (productIdToRemove == 3) throw new Exception("Simulated exception trying to remove product!");
+        var product = await _context.Products
+            .FirstOrDefaultAsync(p => p.Id == productIdToRemove);
+        if (product != null)
         {
-            context.Products.Remove(product);
-            await context.SaveChangesAsync();
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
         }
+    }
+
+    public async Task<List<Category>> GetAllCategoriesAsync()
+    {
+        return await _context.Categories.ToListAsync();
+    }
+
+    public async Task<Category?> GetCategoryByIdAsync(int categoryId)
+    {
+        return await _context.Categories.FirstOrDefaultAsync(m => m.Id == categoryId);
     }
 }

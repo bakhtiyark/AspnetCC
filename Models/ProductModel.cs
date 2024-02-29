@@ -1,5 +1,7 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using CarvedRock.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CarvedRock.Models;
 
@@ -24,6 +26,7 @@ public class ProductModel
 
     [DisplayName("Category")] public string? CategoryName { get; set; }
 
+    public List<SelectListItem> AvailableCategories { get; set; } = new();
 
     public static ProductModel FromProduct(Product product)
     {

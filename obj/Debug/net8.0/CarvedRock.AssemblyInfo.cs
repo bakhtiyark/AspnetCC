@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarvedRock")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cad49884be662031248018593f7687d1d40e128")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8151693a3a5b40ec44649d7c6e65f418db644fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarvedRock")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarvedRock")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

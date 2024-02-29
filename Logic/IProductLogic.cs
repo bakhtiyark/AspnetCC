@@ -5,8 +5,10 @@ namespace CarvedRock.Logic;
 public interface IProductLogic
 {
     Task<List<ProductModel>> GetAllProducts();
-    Task<ProductModel?> GetProductById(int productId);
+    Task<ProductModel?> GetProductById(int id);
     Task AddNewProduct(ProductModel productToAdd);
-    Task RemoveProduct(int productIdToRemove);
+    Task RemoveProduct(int id);
     Task UpdateProduct(ProductModel productToUpdate);
+    Task<ProductModel> InitializeProductModel();
+    Task GetAvailableCategories(ProductModel productModel);
 }

@@ -1,0 +1,6 @@
+.git
+.idea
+.vs
+
+/obj/
+/bin/

@@ -67,8 +67,6 @@ $wwwroot/css/litera-bootstrap.min.css,d\0\d0857913595d2b089dbf7dda2e9168aff4d7f
 X
 (Migrations/20240226214943_AddCategory.cs,f\9\f9709e9aefcd611be299fe889295bc5d90a8cd0b
 S
-#Controllers/CaterogiesController.cs,1\b\1b1211e5db26e104bb53b016a303a065ed25f430
-S
 #Controllers/CategoriesController.cs,d\1\d17ed5ce227d94fe8cf58b17153bbddaf55704ab
 N
 Views/Categories/Create.cshtml,9\8\986a809d8c2eb15e97b4cf31f9656e81130cce87

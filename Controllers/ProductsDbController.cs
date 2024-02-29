@@ -1,3 +1,4 @@
+#nullable disable
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +48,9 @@ public class ProductsDbController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Name,Description,Price,IsActive")] Product product)
+    public async Task<IActionResult> Create(
+        [Bind("Id,Name,Description,Price,IsActive")]
+        Product product)
     {
         if (ModelState.IsValid)
         {
@@ -118,8 +121,7 @@ public class ProductsDbController : Controller
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var product = await _context.Products.FindAsync(id);
-        if (product != null) _context.Products.Remove(product);
-
+        _context.Products.Remove(product);
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }
